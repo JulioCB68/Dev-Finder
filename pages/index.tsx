@@ -2,6 +2,7 @@ import Head from "next/head";
 
 import { robotoMono } from "@/config/font";
 import { metaData } from "@/config/meta";
+import { Login } from "@/pages/Login";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
       </Head>
 
       <div className={`${robotoMono.className}`}>
-        <h1>Hello World!</h1>
+        <Login />
       </div>
     </>
   );
