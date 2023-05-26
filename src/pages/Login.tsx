@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { GoMarkGithub } from "react-icons/go";
 import Link from "next/link";
+import { GoMarkGithub } from "react-icons/go";
 
 import ImageLogin from "@/assets/images/Login.svg";
 
