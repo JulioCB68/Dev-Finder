@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         background: "#282a36",
 
+        textPrimary: "#e6edf3",
         textWhite: "#FFFFFF",
         textBlack: "#000000",
 
@@ -17,6 +18,8 @@ module.exports = {
         secondary: "#161b22",
         tertionary: "#238636",
         tertionaryHover: "#2EA043",
+        blue: "#0a60c4",
+        gray: "#747d8f",
       },
     },
   },
