@@ -19,7 +19,7 @@ module.exports = {
         tertionary: "#238636",
         tertionaryHover: "#2EA043",
         blue: "#0a60c4",
-        gray: "#747d8f",
+        gray: "#8e95a4",
       },
     },
   },
