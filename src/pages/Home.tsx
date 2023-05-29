@@ -1,15 +1,11 @@
 import { useEffect } from "react";
-import Image from "next/image";
 import { useQuery } from "react-query";
 import { useRouter } from "next/router";
-import { MdLocationOn } from "react-icons/md";
-import { CgWebsite } from "react-icons/cg";
-import { FaTwitter } from "react-icons/fa";
-import { HiBuildingOffice2 } from "react-icons/hi2";
 
 import { getGithubToken } from "@/services/githubToken";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { Profile } from "@/components/Profile";
+import { Header } from "@/components/Header";
 
 export function Home() {
   const router = useRouter();
@@ -31,8 +27,11 @@ export function Home() {
 
   return (
     <div className="h-screen items-center justify-center bg-primary text-textPrimary">
-      {user && <Profile user={user} />}
-      {!user && <Profile user={data!} />}
+      <Header />
+      <div className="my-04 mx-auto max-w-4xl px-12">
+        {user && <Profile user={user} />}
+        {!user && <Profile user={data!} />}
+      </div>
     </div>
   );
 }

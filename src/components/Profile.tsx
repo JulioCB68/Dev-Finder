@@ -13,7 +13,7 @@ interface ProfileProps {
 export function Profile({ user }: ProfileProps) {
   return (
     <div className="flex h-screen items-center justify-center bg-primary text-textPrimary">
-      <div className="flex w-3/4 max-w-4xl rounded-md bg-secondary p-8">
+      <div className="flex rounded-md bg-secondary p-8">
         <div className="w-1/4">
           <Image
             className="mr-10 cursor-pointer rounded-full"
