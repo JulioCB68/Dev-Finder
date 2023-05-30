@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 import { getGithubToken } from "@/services/githubToken";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
-import { Profile } from "@/components/Profile";
+import { ProfileCard } from "@/components/ProfileCard";
 import { Header } from "@/components/Header";
 
 export function Home() {
@@ -26,11 +26,15 @@ export function Home() {
   );
 
   return (
-    <div className="h-screen items-center justify-center bg-primary text-textPrimary">
+    <div className="items-center justify-center text-textPrimary">
       <Header />
-      <div className="my-04 mx-auto max-w-4xl px-12">
-        {user && <Profile user={user} />}
-        {!user && <Profile user={data!} />}
+      <div className="h-screen bg-primary">
+        <div className="my-04 mx-auto max-w-4xl px-12">
+          <div className="flex h-screen items-center justify-center text-textPrimary">
+            {user && <ProfileCard user={user} />}
+            {!user && <ProfileCard user={data!} />}
+          </div>
+        </div>
       </div>
     </div>
   );

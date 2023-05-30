@@ -3,8 +3,6 @@ import { useRouter } from "next/router";
 
 import { Home } from "@/pages/Home";
 
-const AuthPage = () => {
+export default function AuthPage() {
   return <Home />;
-};
-
-export default AuthPage;
+}
