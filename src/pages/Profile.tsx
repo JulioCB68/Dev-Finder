@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useQuery } from "react-query";
 
@@ -17,6 +17,7 @@ export function Profile() {
     {
       enabled: !!name,
       refetchOnWindowFocus: false,
+      onSuccess: () => setTimeout(() => {}, 5500),
     }
   );
 
@@ -27,7 +28,7 @@ export function Profile() {
         <div className="h-screen bg-gray dark:bg-primary">
           <div className="my-04 mx-auto max-w-4xl px-12">
             <div className="flex h-screen items-center justify-center text-textBlack dark:text-textPrimary">
-              {data && <ProfileCard user={data} />}
+              <h1>Carregando...</h1>
             </div>
           </div>
         </div>
