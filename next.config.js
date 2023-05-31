@@ -5,5 +5,6 @@ const nextConfig = {
     domains: ["avatars.githubusercontent.com"],
   },
 };
-
 module.exports = nextConfig;
+
+require("dotenv").config();
