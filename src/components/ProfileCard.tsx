@@ -12,7 +12,7 @@ interface ProfileProps {
 
 export function ProfileCard({ user }: ProfileProps) {
   return (
-    <div className="flex min-w-[800px] rounded-md bg-secondary p-8">
+    <div className="flex min-w-[800px] rounded-md bg-white p-8 dark:bg-secondary">
       <div className="w-1/4">
         <Image
           className="mr-10 cursor-pointer rounded-full"
@@ -29,16 +29,16 @@ export function ProfileCard({ user }: ProfileProps) {
               <p className="text-3xl font-semibold">{user?.name}</p>
               <p>Joined {formaterDate(user?.created_at)}</p>
             </div>
-            <p className="cursor-pointer text-sm font-semibold text-blue">
+            <p className="cursor-pointer text-sm font-semibold text-lightBlue dark:text-blue">
               @{user?.login}
             </p>
-            <p className="text-sm font-semibold text-gray">
+            <p className="text-sm font-semibold text-darkGray">
               {user?.bio ? user?.bio : "This profile has no bio"}
             </p>
           </div>
         </div>
         <div className="flex cursor-pointer">
-          <div className="my-8 flex w-full justify-between rounded-md bg-primary p-6">
+          <div className="my-8 flex w-full justify-between rounded-md bg-gray p-6 dark:bg-primary">
             <InfoProfileGithub name="Repositories" info={user?.public_repos} />
             <InfoProfileGithub name="Followers" info={user?.followers} />
             <InfoProfileGithub name="Following" info={user?.following} />

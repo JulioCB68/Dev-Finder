@@ -26,11 +26,11 @@ export function Home() {
   );
 
   return (
-    <div className="items-center justify-center text-textPrimary">
+    <div className="items-center justify-center">
       <Header />
-      <div className="h-screen bg-primary">
+      <div className="h-screen bg-gray dark:bg-primary">
         <div className="my-04 mx-auto max-w-4xl px-12">
-          <div className="flex h-screen items-center justify-center text-textPrimary">
+          <div className="flex h-screen items-center justify-center text-textBlack dark:text-textPrimary">
             {user && <ProfileCard user={user} />}
             {!user && <ProfileCard user={data!} />}
           </div>

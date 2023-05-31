@@ -14,14 +14,21 @@ module.exports = {
         textWhite: "#FFFFFF",
         textBlack: "#000000",
 
+        header: "#24292f",
+
         primary: "#0d1117",
         secondary: "#161b22",
         tertionary: "#238636",
         tertionaryHover: "#2EA043",
+        lightBlue: "#0969da",
+        darkBlue: "#3178c6",
         blue: "#0a60c4",
-        gray: "#8e95a4",
+        lightGray: "#f6f8fa",
+        darkGray: "#8e95a4",
+        gray: "#d0d7de",
       },
     },
   },
+  darkMode: "class",
   plugins: [],
 };

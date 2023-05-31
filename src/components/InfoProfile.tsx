@@ -27,7 +27,7 @@ export function InfoProfile({ info, icon }: ProfileProps) {
   return (
     <p
       className={`flex cursor-pointer items-center py-3 ${
-        info ? "text-white" : "text-gray"
+        info ? "text-header dark:text-white" : "text-darkGray"
       }`}
     >
       {renderIcon()}
