@@ -32,7 +32,3 @@ export default async function getAccessToken(
   const user = userResponse.data;
   res.status(200).json(user);
 }
-
-require("dotenv").config({
-  path: process.env.NODE_ENV === "production" ? ".env.production" : ".env",
-});
