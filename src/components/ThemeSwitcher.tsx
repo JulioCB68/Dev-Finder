@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export function ThemeSwitcher() {
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(true);
 
   const toggleTheme = () => {
     setIsDarkTheme(!isDarkTheme);
@@ -10,7 +10,6 @@ export function ThemeSwitcher() {
 
   return (
     <div className="flex items-center justify-center">
-      {/* <span className="mr-2">Dark Theme</span> */}
       <button
         className={`${
           isDarkTheme ? "bg-primary" : "bg-textPrimary"
@@ -23,7 +22,6 @@ export function ThemeSwitcher() {
           } inline-block h-5 w-5 transform rounded-full bg-tertionary shadow-lg transition-transform duration-300`}
         ></span>
       </button>
-      {/* <span className="ml-2">Light Theme</span> */}
     </div>
   );
 }

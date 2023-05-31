@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { GoSearch } from "react-icons/go";
 
 import { routes } from "@/config/routes";
@@ -8,13 +7,13 @@ import { routes } from "@/config/routes";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export function Header() {
-  const router = useRouter();
-
   const [name, setName] = useState("");
 
   const handleRoute = () => {
     if (name) {
-      router.push(routes.profile(name));
+      if (typeof window !== "undefined") {
+        window.location.replace(routes.profile(name));
+      }
     }
   };
 
@@ -29,10 +28,9 @@ export function Header() {
             </Link>
             <input
               type="text"
-              name="name"
               placeholder="Search for Profile..."
               onChange={(e) => setName(e.target.value)}
-              className="bg-transparent p-2 outline-none"
+              className="bg-primary p-2 outline-none"
             />
             <Link
               href="#"
