@@ -10,7 +10,7 @@ import { routes } from "@/config/routes";
 
 import { ThemeSwitcher } from "./ThemeSwitcher";
 
-const sairaStencil = Teko({
+const teko = Teko({
   weight: ["400"],
   subsets: ["latin"],
 });
@@ -23,7 +23,7 @@ export function Header() {
     <div className="w-full bg-header py-4 text-white">
       <div className="my-04 mx-auto flex max-w-4xl items-center justify-between px-12">
         <div
-          className={`${sairaStencil.className} flex cursor-pointer items-center justify-center text-4xl`}
+          className={`${teko.className} flex cursor-pointer items-center justify-center text-4xl`}
         >
           <GoSearch size={26} className="mr-3 cursor-pointer" />
           <h1>DevFinder</h1>
