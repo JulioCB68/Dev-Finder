@@ -28,27 +28,25 @@ export function Header() {
           <GoSearch size={26} className="mr-3 cursor-pointer" />
           <h1>DevFinder</h1>
         </div>
-        <div className="flex items-center justify-between">
-          <div className="mr-6 flex items-center justify-between rounded-md bg-primary py-1 pl-4">
-            <Link href={routes.profile(name)} passHref>
-              <GoSearch size={20} className="mr-2 cursor-pointer" />
-            </Link>
-            <input
-              type="text"
-              placeholder="Search for Profile..."
-              onChange={(e) => setName(e.target.value)}
-              className="bg-primary p-2 outline-none"
-            />
-            <Link
-              href={routes.profile(name)}
-              passHref
-              className="mx-2 cursor-pointer rounded-md bg-secondary px-6 py-2"
-            >
-              Search
-            </Link>
-          </div>
-          <ThemeSwitcher />
+        <div className="mr-6 flex items-center justify-between rounded-md bg-primary py-1 pl-4">
+          <Link href={routes.profile(name)} passHref>
+            <GoSearch size={20} className="mr-2 cursor-pointer" />
+          </Link>
+          <input
+            type="text"
+            placeholder="Search for Profile..."
+            onChange={(e) => setName(e.target.value)}
+            className="bg-primary p-2 outline-none"
+          />
+          <Link
+            href={routes.profile(name)}
+            passHref
+            className="mx-2 cursor-pointer rounded-md bg-secondary px-6 py-2"
+          >
+            Search
+          </Link>
         </div>
+        <ThemeSwitcher />
       </div>
     </div>
   );
