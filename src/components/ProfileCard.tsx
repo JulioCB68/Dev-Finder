@@ -13,7 +13,7 @@ interface ProfileProps {
 
 export function ProfileCard({ user }: ProfileProps) {
   return (
-    <div className="flex min-w-[800px] rounded-md bg-white p-8 dark:bg-secondary">
+    <div className="flex flex-col rounded-md bg-white p-8 dark:bg-secondary md:flex-row lg:min-w-[800px]">
       <div className="w-1/4">
         <Link href={user?.html_url || ""}>
           <Image
